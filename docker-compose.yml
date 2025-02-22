@@ -30,6 +30,9 @@ services:
     networks:
       - app_network
 
+volumes:
+  postgres_data:
+
 networks:
   app_network:
     driver: bridge
