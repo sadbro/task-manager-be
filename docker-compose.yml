@@ -2,7 +2,7 @@ services:
   backend:
     build:
       context: ./
-    ports: 
+    ports:
       - "8000:8000"
     environment:
       - PORT=8000
@@ -12,6 +12,7 @@ services:
     volumes:
       - ./:/app
       - /app/node_modules
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     networks:
       - app_network
 
