@@ -12,7 +12,6 @@ services:
     volumes:
       - ./:/app
       - /app/node_modules
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     networks:
       - app_network
 
@@ -33,6 +32,7 @@ services:
 
 volumes:
   postgres_data:
+    - ./init.sql:/docker-entrypoint-initdb.d/init.sql
 
 networks:
   app_network:
