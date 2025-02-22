@@ -30,10 +30,6 @@ services:
     networks:
       - app_network
 
-volumes:
-  postgres_data:
-    - ./init.sql:/docker-entrypoint-initdb.d/init.sql
-
 networks:
   app_network:
     driver: bridge
