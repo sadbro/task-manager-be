@@ -62,7 +62,7 @@ authRouter.post(
       // get req body
       const { email, password } = req.body;
 
-      // check if the user doesnt exist
+      // check if the user doesn't exist
       const [existingUser] = await db
         .select()
         .from(users)
